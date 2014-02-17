@@ -3,7 +3,7 @@
 	
 	if (!isset($_SESSION['comprovante'])) {
 		echo "<script language=\"javascript\">";
-			echo "alert(\"Sua sessão expirou ou você está tentando acessar diretamente a página de emissão de comprovante.\\nPor favor, responda a pesquisa e o seu comprovante de participação será emitido.\");";
+			echo "alert(\"Sua sessão expirou ou você está tentando acessar diretamente a página de emissão de comprovante.\\nPor favor, primeiro responda a pesquisa para que o seu comprovante de participação seja emitido.\");";
 			echo "location.href=\"pesquisa.php\";";
 		echo "</script>";
 	}
@@ -12,7 +12,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Pesquisa de Clima Organizacional</title>
+		<title>Comprovante de Resposta à Pesquisa de Clima Organizacional</title>
 		<link rel="stylesheet" href="css/estilo.css">
 	</head>
 	<body  id="comprovante">
