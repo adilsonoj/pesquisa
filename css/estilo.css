@@ -16,9 +16,21 @@ p{
 	text-align: justify;
 	line-height: 150%;
 	margin-right: 15px;
-
 }
 
+hr{
+	width: 600px;
+}
+
+hr#top{
+	margin-top: 15px;
+	margin-bottom: -8px;
+}
+
+hr#bottom{
+	margin-top: -8px;
+	margin-bottom: 25px;
+}
 
 
 h1, h2, h3{
@@ -27,7 +39,7 @@ h1, h2, h3{
 
 .dados_pessoais {
 	display: inline;
-	width: 200px;
+	width: 206px;
 }
 
 tr{
@@ -132,8 +144,9 @@ fieldset{
 
 #img_netuno{
 	float:left;
-	margin-top: 10px;
+	margin-top: 4px;
 	margin-left: 15px;
+	margin-right: 15px;
 }
 
 /*CSS do comprovante*/

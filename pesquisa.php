@@ -17,11 +17,14 @@
 <body>
 	<img src="img/header.gif" alt="DSAM">
 
+	<hr id="top"/>
+	<h2>Pesquisa de Clima Organizacional</h2>
+	<hr id="bottom"/>
 	
-		<img id="img_netuno" src="img/netuno.png" alt="Programa Netuno">
-		<p>
-			Este questionário destina-se à coleta de dados que contribuam para mensurar o nível de satisfação dos militares e servidores civis da DSAM, com relação aos aspectos do ambiente organizacional e a maneira como as pessoas interagem. As informações receberão um tratamento estatístico, com sigilo RESERVADO. Não é necessária a identificação do respondente.
-		</p>
+	<img id="img_netuno" src="img/netuno.png" alt="Programa Netuno">
+	<p>
+		Este questionário destina-se à coleta de dados que contribuam para mensurar o nível de satisfação dos militares e servidores civis da DSAM, com relação aos aspectos do ambiente organizacional e a maneira como as pessoas interagem. As informações receberão um tratamento estatístico, com sigilo RESERVADO. Não é necessária a identificação do respondente.
+	</p>
 	
 	
 
@@ -70,7 +73,7 @@
 			</fieldset>
 
 			<fieldset class="dados_pessoais">
-				<legend>Tempo de Serviço na DSAM</legend>
+				<legend>Tempo de Serviço DSAM</legend>
 				<select name="tempo">
 					
 			  	<option  value="0-1">Menos de 1 ano</option>";
