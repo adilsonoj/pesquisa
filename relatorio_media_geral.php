@@ -3,17 +3,23 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Pesquisa de Clima Organizacional</title>
+	<title>Pesquisa de Clima Organizacional - Relatório de Médias</title>
 	
 	<link rel="stylesheet" href="css/estilo.css">
-
-
 </head>
 
 <body>
 	<img src="img/header.gif" alt="DSAM">
 
+	<hr id="top"/>
+	<h2>Pesquisa de Clima Organizacional</h2>
+	<hr id="bottom"/>
+
 	<table>
+		<tr>
+			<th colspan="2">RELATÓRIO DE MÉDIA DO GRAU DE SATISFAÇÃO POR PERGUNTA</th>
+		</tr>
+
 		<tr>
 			<th>QUESTÃO</th>
 			<th>MÉDIA DO GRAU</th>
