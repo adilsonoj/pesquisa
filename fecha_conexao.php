@@ -1,0 +1,1 @@
+<? oci_close($ora_conn); ?>

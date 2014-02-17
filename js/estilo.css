@@ -1,0 +1,95 @@
+body{
+	margin-left: auto;
+	margin-right: auto;
+	width: 940px;
+}
+
+p{
+	text-align: justify;
+}
+
+h1, h2, h4{
+	text-align: center;
+}
+
+.dados_pessoais {
+	display: inline;
+	width: 195px;
+}
+
+tr{
+	height: 3px;
+}
+
+td, th{
+	
+	width: 480px;
+	margin: 0px;
+	height: 30px;
+}
+
+
+
+ tr:nth-child(odd) { 
+ 	background-color:#4291A0;
+ 	
+ } 
+
+#media{
+	text-align: center;
+}
+
+#resposta_aberta{
+	width: 940px;
+	display: block;
+	
+
+}
+
+#count{
+	
+	display: block;
+	margin-left: 50px;
+
+}
+
+#questao{
+	font-weight: bold;
+}
+
+#rel_alternativas{
+	margin-left: 200px;
+}
+
+li{
+	display: inline;
+	text-decoration: none;
+
+}
+
+ul{
+	text-align: center;
+}
+
+.myButton {
+	background-color:#4290a0;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #08b3d1;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:16px;
+	padding:9px 63px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #083840;
+}
+.myButton:hover {
+	background-color:#076373;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
