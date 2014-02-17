@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Pesquisa de Clima Organizacional</title>
+	<title>Pesquisa de Clima Organizacional - Relatório Quantitativo</title>
 	
 	<link rel="stylesheet" href="css/estilo.css">
 
@@ -12,12 +12,14 @@
 
 <body>
 	<img src="img/header.gif" alt="DSAM">
-	
+
+	<hr id="top"/>
+	<h2>Pesquisa de Clima Organizacional</h2>
+	<hr id="bottom"/>
+
 	<table id="rel_alternativas">
 		<tr>
 			<th>RELATÓRIO DE QUANTIDADE DO VOTOS POR GRAU</th>
-			
-			
 		</tr>
 
 			<?
