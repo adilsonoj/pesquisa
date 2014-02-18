@@ -39,7 +39,7 @@ h1, h2, h3{
 
 .dados_pessoais {
 	display: inline;
-	width: 206px;
+	width: 205px;
 }
 
 tr{
@@ -149,6 +149,20 @@ fieldset{
 	margin-left: 15px;
 	margin-right: 15px;
 }
+
+#form_login{
+	margin-left: 400px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+/*CSS relatorios.php*/
+
+.link_relatorio{
+		margin-left: 200px;
+	
+}
+
 
 /*CSS do comprovante*/
 

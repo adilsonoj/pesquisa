@@ -6,6 +6,8 @@
 	<title>Pesquisa de Clima Organizacional - Relatório de Médias</title>
 	
 	<link rel="stylesheet" href="css/estilo.css">
+
+
 </head>
 
 <body>
@@ -26,24 +28,17 @@
 		</tr>
 
 			<?
-				$sql = oci_parse($ora_conn,"SELECT * FROM pergunta");
-				OCI_Execute($sql);
+				$sql_pergunta = oci_parse($ora_conn,"SELECT * FROM pergunta");
+				OCI_Execute($sql_pergunta);
 
-				while (oci_fetch_assoc($sql)){}
+				while ($row_pergunta = oci_fetch_assoc($sql_pergunta)){
+					$id_pergunta = $row_pergunta['ID'];
 
-				$numero_perguntas = oci_num_rows($sql);
-
-				echo "";
-
-				for ($i=1; $i<=$numero_perguntas; $i++) {
-
-					$sql_media = oci_parse($ora_conn, "SELECT AVG(ID_ALTERNATIVA_RESPOSTA) FROM RESPOSTA_FECHADA WHERE ID_PERGUNTA=$i");
+					$sql_media = oci_parse($ora_conn, "SELECT AVG(ID_ALTERNATIVA_RESPOSTA) FROM RESPOSTA_FECHADA WHERE ID_PERGUNTA= $id_pergunta");
 					OCI_Execute($sql_media);
 					$row_media = oci_fetch_assoc($sql_media);
 
-					$sql_pergunta = oci_parse($ora_conn, "SELECT NUMERO, ENUNCIADO FROM PERGUNTA WHERE ID=$i");
-					OCI_Execute($sql_pergunta);
-					$row_pergunta = oci_fetch_assoc($sql_pergunta);
+					
 					
 					if (!$row_media['AVG(ID_ALTERNATIVA_RESPOSTA)']==NULL){
 
@@ -52,7 +47,7 @@
 						
 					} else {
 
-						$sql = oci_parse($ora_conn,"SELECT RESPOSTA FROM RESPOSTA_ABERTA WHERE ID_PERGUNTA=$i");
+						$sql = oci_parse($ora_conn,"SELECT RESPOSTA FROM RESPOSTA_ABERTA WHERE ID_PERGUNTA=$id_pergunta");
 						OCI_Execute($sql);
 					?>
 
