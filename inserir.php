@@ -13,7 +13,7 @@
 	$insert_error = false;
 	$comprovante_pesq = uniqid();
 
-	$query_respondente = "INSERT INTO respondente(faixa_etaria, posto, escolaridade, tempo_svc_dsam, comprovante_pesq) VALUES('$faixa_etaria', '$posto', '$escolaridade', '$tempo', '$comprovante_pesq') RETURNING id INTO :id";
+	$query_respondente = "INSERT INTO respondente(faixa_etaria, posto, escolaridade, tempo_svc_dsam, comprovante_pesq, data_hora_resposta) VALUES('$faixa_etaria', '$posto', '$escolaridade', '$tempo', '$comprovante_pesq', SYSDATE) RETURNING id INTO :id";
 	$statement_respondente = oci_parse($ora_conn, $query_respondente);
 	oci_bind_by_name($statement_respondente, ":id", $respondente_id, 32);
 	
