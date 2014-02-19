@@ -10,8 +10,6 @@
 	<title>Pesquisa de Clima Organizacional - Relatório de Médias</title>
 	
 	<link rel="stylesheet" href="css/estilo.css">
-
-
 </head>
 
 <body>
@@ -27,51 +25,42 @@
 		</tr>
 
 		<tr>
-			<th>QUESTÃO</th>
+			<th>PERGUNTA</th>
 			<th>MÉDIA DO GRAU</th>
 		</tr>
 
-			<?
-				$sql_pergunta = oci_parse($ora_conn,"SELECT * FROM pergunta");
-				OCI_Execute($sql_pergunta);
+		<?
+			$sql_pergunta = oci_parse($ora_conn,"SELECT * FROM pergunta");
+			oci_execute($sql_pergunta);
 
-				while ($row_pergunta = oci_fetch_assoc($sql_pergunta)){
-					$id_pergunta = $row_pergunta['ID'];
+			while ($row_pergunta = oci_fetch_assoc($sql_pergunta)) {
+				$id_pergunta = $row_pergunta['ID'];
 
-					$sql_media = oci_parse($ora_conn, "SELECT AVG(ID_ALTERNATIVA_RESPOSTA) FROM RESPOSTA_FECHADA WHERE ID_PERGUNTA= $id_pergunta");
-					OCI_Execute($sql_media);
-					$row_media = oci_fetch_assoc($sql_media);
+				$sql_media = oci_parse($ora_conn, "SELECT AVG(ID_ALTERNATIVA_RESPOSTA) FROM RESPOSTA_FECHADA WHERE ID_PERGUNTA = $id_pergunta");
+				oci_execute($sql_media);
+				$row_media = oci_fetch_assoc($sql_media);
 
-					
-					
-					if (!$row_media['AVG(ID_ALTERNATIVA_RESPOSTA)']==NULL){
-
-						echo "<tr><td>". $row_pergunta['NUMERO'].") ". $row_pergunta['ENUNCIADO']."</td>";
-						echo "<td id='media'>".number_format($row_media['AVG(ID_ALTERNATIVA_RESPOSTA)'], 1)."</td></tr>";
-						
-					} else {
-
-						$sql = oci_parse($ora_conn,"SELECT RESPOSTA FROM RESPOSTA_ABERTA WHERE ID_PERGUNTA=$id_pergunta");
-						OCI_Execute($sql);
-					?>
+				if (!$row_media['AVG(ID_ALTERNATIVA_RESPOSTA)']==NULL){
+					echo "<tr><td>". $row_pergunta['NUMERO'].") ". $row_pergunta['ENUNCIADO']."</td>";
+					echo "<td id='media'>".number_format($row_media['AVG(ID_ALTERNATIVA_RESPOSTA)'], 1)."</td></tr>";
+				} else {
+		?>
 
 	</table>
 		
 	<table>
 
+		<?
+					$sql = oci_parse($ora_conn,"SELECT RESPOSTA FROM RESPOSTA_ABERTA WHERE ID_PERGUNTA = $id_pergunta");
+					oci_execute($sql);
 
-				<?
 					echo "<h4>". $row_pergunta['NUMERO'].") ".$row_pergunta['ENUNCIADO']."</h4>";
 
 					while ($row_resposta = oci_fetch_assoc($sql)){
-						
 						echo "<tr><td id='resposta_aberta'>".$row_resposta['RESPOSTA']."</td></tr>";
 					}
-
-					
 				}
 			}
-			
 		?>
 	</table>
 
