@@ -11,6 +11,7 @@
 	$respostas_abertas = $_POST['resposta_aberta'];
 	
 	$insert_error = false;
+	$commit_success = false;
 	$comprovante_pesq = uniqid();
 
 	$query_respondente = "INSERT INTO respondente(faixa_etaria, posto, escolaridade, tempo_svc_dsam, comprovante_pesq, data_hora_resposta) VALUES('$faixa_etaria', '$posto', '$escolaridade', '$tempo', '$comprovante_pesq', SYSDATE) RETURNING id INTO :id";
