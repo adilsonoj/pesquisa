@@ -1,4 +1,6 @@
-<? require("conexao.php"); ?>
+<?
+include ("sessao.php"); 
+require("conexao.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>

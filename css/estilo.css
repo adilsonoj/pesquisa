@@ -156,6 +156,12 @@ fieldset{
 	margin-bottom: 100px;
 }
 
+
+ul#sair{
+	margin-bottom: 50px;
+    margin-left: 500px;
+}
+
 /*CSS relatorios.php*/
 
 .link_relatorio{
