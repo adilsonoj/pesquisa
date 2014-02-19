@@ -7,12 +7,5 @@
 		echo "<script type='text/javascript'>";
    	 		echo "alert('Não é indicada a utilização do navegador ".$browser. "\\nPor favor, utilize o navegador Mozilla Firefox para obter uma melhor experiência.');";
 	  	echo "</script>";
-  	}elseif(preg_match('|Firefox/([0-9\.]+)|',$useragent,$matched) || $matched[1] < 13) {
-    	$browser_version=$matched[1];
-    	$browser = 'Firefox';
-    
-    	echo "<script type='text/javascript'>";
-      		echo "alert('Não é indicado a utilização do navegador ".$browser. " versão: ".$browser_version."\\nUtilize o Firefox mais recente com para obter uma melhor experiência');";
-    	echo "</script>";
   	}
 ?>
