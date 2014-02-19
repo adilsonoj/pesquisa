@@ -114,7 +114,7 @@
 									echo "<tr><td>";
 										
 										$id_pergunta = $row['ID'];
-										$sql2 = oci_parse($ora_conn, "SELECT id,alternativa,id_pergunta FROM alternativa WHERE id_pergunta=$id_pergunta");
+										$sql2 = oci_parse($ora_conn, "SELECT id,alternativa,id_pergunta FROM alternativa WHERE id_pergunta=$id_pergunta ORDER BY ordem_alternativa");
 
   								 		OCI_Execute($sql2);
 
