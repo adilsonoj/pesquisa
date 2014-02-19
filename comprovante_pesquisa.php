@@ -4,7 +4,7 @@
 	if (!isset($_SESSION['comprovante'])) {
 		echo "<script language=\"javascript\">";
 			echo "alert(\"Sua sessão expirou ou você está tentando acessar diretamente a página de emissão de comprovante.\\nSe você ainda não participou da pesquisa, por favor, responda as perguntas e nós emitiremos o seu comprovante de participação.\");";
-			echo "location.href=\"pesquisa.php\";";
+			echo "location.href=\"index.php\";";
 		echo "</script>";
 	}
 ?>
