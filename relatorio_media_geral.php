@@ -1,6 +1,8 @@
 <?
-include ("sessao.php"); 
-require("conexao.php"); ?>
+	require("valida_sessao_adm.php");
+	require("conexao.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

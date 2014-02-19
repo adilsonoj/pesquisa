@@ -1,4 +1,7 @@
-<?include ("sessao.php");?>
+<?
+	require("valida_sessao_adm.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
