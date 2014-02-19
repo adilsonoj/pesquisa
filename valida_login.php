@@ -3,14 +3,14 @@
 
 	session_start();
 
-	$usuario = $_REQUEST['usuario'];
-	$senha = $_REQUEST['senha'];
-
-	$sql_conexao = oci_parse($ora_conn,"SELECT LOGIN FROM USUARIO WHERE LOGIN='$usuario' AND SENHA=$senha");
+	$usuario = $_POST['usuario'];
+	$senha = $_POST['senha'];
+	
+	$sql_conexao = oci_parse($ora_conn, "SELECT login FROM usuario WHERE login = '$usuario' AND senha = '$senha'");
 	oci_execute($sql_conexao);
 	
 	if (oci_fetch($sql_conexao)) {
-		$_SESSION['usuario']=$usuario; 
+		$_SESSION['usuario'] = $usuario; 
 		header("location: relatorios.php");
 	}else {
 ?> 
