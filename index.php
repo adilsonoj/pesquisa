@@ -23,7 +23,7 @@
 		Este questionário destina-se à coleta de dados que contribuam para mensurar o nível de satisfação dos militares e servidores civis da DSAM, com relação aos aspectos do ambiente organizacional e a maneira como as pessoas interagem. As informações receberão um tratamento estatístico, com sigilo RESERVADO. Não é necessária a identificação do respondente.
 	</p>
 
-	<form action="inserir.php" method="post" >
+	<form action="inserir_respostas.php" method="post" >
 
 		<fieldset>
 			<legend class="legend">DADOS PESSOAIS</legend>
