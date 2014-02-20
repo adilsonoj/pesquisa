@@ -1,5 +1,6 @@
 <? 
 	session_start();
+	include "validaAcesso.inc";
 	
 	if (!isset($_SESSION['comprovante'])) {
 		echo "<script language=\"javascript\">";

@@ -1,4 +1,6 @@
-<? require "conexao.php"; ?>
+<? require "conexao.php"; 
+include "validaAcesso.inc";
+?>
 
 <!DOCTYPE html>
 <html>

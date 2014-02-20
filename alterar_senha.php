@@ -1,5 +1,6 @@
 <?
 	require ("conexao.php");
+	
 
 	$login = $_POST['usuario'];
 	$hashSenha = hash('SHA512', $_POST['senha'], true);
