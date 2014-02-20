@@ -19,7 +19,7 @@ include "validaAcesso.inc";
 	
 		<form id="form_login" name="form_login" METHOD = "POST" action="valida_login.php">
 			Usuário: <input type="text" name="usuario" size="20"></br>
-			Senha: &nbsp; <input type="password" name="senha" size="8"></br>
+			Senha: &nbsp; <input type="password" name="senha" maxlength="8" size="12"></br>
 		
 			<input type="submit" value="Enviar">
 		</form>
