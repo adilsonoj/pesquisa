@@ -21,16 +21,16 @@
 
 	<table>
 		<tr>
-			<th colspan="2">RELATÓRIO DE MÉDIA DO GRAU DE SATISFAÇÃO POR PERGUNTA</th>
+			<th colspan="2">RELATÓRIO DA MÉDIA DO GRAU DE SATISFAÇÃO POR PERGUNTA</th>
 		</tr>
 
 		<tr>
 			<th>PERGUNTA</th>
-			<th>MÉDIA DO GRAU</th>
+			<th>MÉDIA DO GRAU DE SATISFAÇÃO</th>
 		</tr>
 
 		<?
-			$sql_pergunta = oci_parse($ora_conn,"SELECT * FROM pergunta");
+			$sql_pergunta = oci_parse($ora_conn,"SELECT * FROM pergunta ORDER BY numero");
 			oci_execute($sql_pergunta);
 
 			while ($row_pergunta = oci_fetch_assoc($sql_pergunta)) {

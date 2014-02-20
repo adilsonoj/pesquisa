@@ -21,18 +21,18 @@
 
 	<table id="rel_alternativas">
 		<tr>
-			<th>RELATÓRIO DE QUANTIDADE DO VOTOS POR GRAU</th>
+			<th>RELATÓRIO DA QUANTIDADE DE VOTOS POR GRAU DE SATISFAÇÃO</th>
 		</tr>
 
 		<?
-			$sql_pergunta = oci_parse($ora_conn, "SELECT DISTINCT (P.ID), P.NUMERO, P.ENUNCIADO FROM PERGUNTA P, ALTERNATIVA A WHERE P.ID = A.ID_PERGUNTA");
+			$sql_pergunta = oci_parse($ora_conn, "SELECT DISTINCT (P.ID), P.NUMERO, P.ENUNCIADO FROM PERGUNTA P, ALTERNATIVA A WHERE P.ID = A.ID_PERGUNTA ORDER BY P.NUMERO");
 			oci_execute($sql_pergunta);
 		
 			while ($row_pergunta = oci_fetch_assoc($sql_pergunta)) {
 				echo "<tr ><td id='questao'>". $row_pergunta['NUMERO'].") ". $row_pergunta['ENUNCIADO']."</td></tr>";
 				$id_pergunta = $row_pergunta['ID'];
 
-				$sql_alternativa = oci_parse ($ora_conn, "SELECT alternativa FROM alternativa WHERE id_pergunta = $id_pergunta");
+				$sql_alternativa = oci_parse ($ora_conn, "SELECT alternativa FROM alternativa WHERE id_pergunta = $id_pergunta ORDER BY ordem_alternativa");
 				oci_execute($sql_alternativa);
 
 				while ($row_alternativa = oci_fetch_assoc($sql_alternativa)){

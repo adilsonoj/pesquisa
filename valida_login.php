@@ -15,7 +15,7 @@
 	}else {
 ?> 
 		<script type="text/javascript">
-			alert("Usuário ou senha inválidos!");
+			alert("Usuário ou senha inválido!");
 			window.location="login.php";
 		</script>
 <?
