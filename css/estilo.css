@@ -171,10 +171,37 @@ ul#sair{
     margin-left: 500px;
 }
 
+table#form_alterar_senha{
+	margin-left: 200px;
+}
+
+table#form_alterar_senha span{
+	color: red;
+}
+
+
+table#form_alterar_senha tr td{
+	width: auto;
+	margin: auto;
+	height: auto;
+	padding-bottom: 10px;
+	
+}
+
+table#form_alterar_senha tr {
+	background-color: #fff;
+	
+}
+
+
+
+
+
 /*CSS relatorios.php*/
 
 .link_relatorio{
 		margin-left: 200px;
+
 	
 }
 

@@ -15,16 +15,27 @@
 		<h2>Formulário para Alteração de Senha</h2>
 		<hr id="bottom"/>
 	
-		<form id="form_login" method="POST" action="alterar_senha.php">
-			Por favor, digite a sua senha atual:</br>
-			<input type="password" name="senha_atual" size="8">
-			</br><br/>
-
-			A seguir, digite duas vezes a sua nova senha (limite de 8 caracteres):</br>
-			Nova Senha: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="password" name="nova_senha" size="8"></br>
-			Confirmar Senha: <input type="password" name="conf_nova_senha" size="8"></br>
-		
-			<input type="submit" value="Enviar">
+		<form  method="POST" action="alterar_senha.php">
+			<table id="form_alterar_senha">
+			<tr>
+				<td>Senha atual:</td>
+				<td><input type="password" name="senha_atual" size="8"></td>
+			</tr>
+			
+					
+			<tr>
+				<td>Nova Senha:</td>
+				<td><input type="password" name="nova_senha" size="8"> <span>(limite de 8 caracteres)</span></td>
+			</tr>	
+			 <tr>
+				<td>Confirmar Senha:</td>
+				<td><input type="password" name="conf_nova_senha" size="8"></td>
+			 </tr>
+			<tr>
+				<td><input type="submit" value="Enviar"></td>
+			</tr>
+			
+			</table>
 		</form>
 			
 		<hr>	
