@@ -74,6 +74,13 @@ include "validaAcesso.inc";
 			
 		<fieldset class="legenda">
 			<legend class="legend">GRAU DE SATISFAÇÃO</legend>
+			<ul class="emoticon">
+				<li class="emoticon"><img src="img/emoticon/1.png"></li>
+				<li class="emoticon"><img src="img/emoticon/2.png"></li>
+				<li class="emoticon"><img src="img/emoticon/3.png"></li>
+				<li class="emoticon"><img src="img/emoticon/4.png"></li>
+				<li class="emoticon"><img src="img/emoticon/5.png"></li>
+			</ul>
 			<ul>
 				<li><b>1)</b> Muito insatisfeito</li>
 				<li><b>2)</b> Insatisfeito</li>
@@ -107,6 +114,7 @@ include "validaAcesso.inc";
   							$numero_perguntas_fechadas += 1; 
 				  				
 				  			do{
+
 								echo "<input id='alternativa' type='radio' name='alternativa[".$row['ID']."]' value='".$row2['ALTERNATIVA']."'><span class='alternativa'>".$row2['ALTERNATIVA']."</span></input>";
 							}while ($row2 = oci_fetch_assoc($sql2));						
 						} else {

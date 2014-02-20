@@ -15,7 +15,7 @@
 		<h2>Formulário para Alteração de Senha</h2>
 		<hr id="bottom"/>
 	
-		<form method="POST" action="alterar_senha.php">
+		<form id="form_login" method="POST" action="alterar_senha.php">
 			Por favor, digite a sua senha atual:</br>
 			<input type="password" name="senha_atual" size="8">
 			</br><br/>
