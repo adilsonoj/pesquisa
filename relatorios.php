@@ -21,7 +21,7 @@
 	<hr id="bottom"/>
 
 	<ul id="sair">
-		<li> <a href="javascript:newWindow('form_alterar_senha.php')"> Alterar Senha</a> </li>
+		<li> <a href="form_alterar_senha.php" onclick="window.open('form_alterar_senha.php','Alteração de Senha','scrollbars=no,width=990,height=380'); return false;"> Alterar Senha</a> </li>
 		<li> <a href="sair.php"> Sair </a> </li>
     </ul>
 
