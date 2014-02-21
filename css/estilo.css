@@ -37,6 +37,10 @@ h1, h2, h3{
 	text-align: center;
 }
 
+h4#tot_participantes{
+	text-align: center;
+}
+
 .dados_pessoais {
 	display: inline;
 	width: 205px;

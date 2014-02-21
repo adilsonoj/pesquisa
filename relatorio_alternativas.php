@@ -1,6 +1,10 @@
 <?
 	require("valida_sessao_adm.php");
 	require("conexao.php");
+
+	$stmt_participantes = oci_parse($ora_conn, "SELECT COUNT(*) TOTAL FROM RESPONDENTE");
+	oci_execute($stmt_participantes);
+	$tot_participantes = oci_fetch_assoc($stmt_participantes);
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +22,8 @@
 	<hr id="top"/>
 	<h2>Pesquisa de Clima Organizacional</h2>
 	<hr id="bottom"/>
+
+	<h4 id="tot_participantes">Total de Participantes: <?=$tot_participantes['TOTAL'];?></h4>
 
 	<table id="rel_alternativas">
 		<tr>
