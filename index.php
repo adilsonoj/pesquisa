@@ -115,7 +115,7 @@ include "validaAcesso.inc";
 				  				
 				  			do{
 
-								echo "<input id='alternativa' type='radio' name='alternativa[".$row['ID']."]' value='".$row2['ALTERNATIVA']."'><span class='alternativa'>".$row2['ALTERNATIVA']."</span></input>";
+								echo "<input id='alternativa' type='radio' name='alternativa[".$row['ID']."]' value='".$row2['ID']."'><span class='alternativa'>".$row2['ALTERNATIVA']."</span></input>";
 							}while ($row2 = oci_fetch_assoc($sql2));						
 						} else {
 							echo "<textarea rows='4' cols='115' name='resposta_aberta[".$row['ID']."]'></textarea>";
