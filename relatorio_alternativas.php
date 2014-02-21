@@ -32,17 +32,17 @@
 				echo "<tr ><td id='questao'>". $row_pergunta['NUMERO'].") ". $row_pergunta['ENUNCIADO']."</td></tr>";
 				$id_pergunta = $row_pergunta['ID'];
 
-				$sql_alternativa = oci_parse ($ora_conn, "SELECT alternativa FROM alternativa WHERE id_pergunta = $id_pergunta ORDER BY ordem_alternativa");
+				$sql_alternativa = oci_parse ($ora_conn, "SELECT id, alternativa FROM alternativa WHERE id_pergunta = $id_pergunta ORDER BY ordem_alternativa");
 				oci_execute($sql_alternativa);
 
 				while ($row_alternativa = oci_fetch_assoc($sql_alternativa)){
-					$alternativa = $row_alternativa['ALTERNATIVA'];
+					$id_alternativa = $row_alternativa['ID'];
 
-					$sql_count = oci_parse($ora_conn, "SELECT COUNT(ID_ALTERNATIVA_RESPOSTA) FROM RESPOSTA_FECHADA WHERE ID_PERGUNTA = $id_pergunta AND ID_ALTERNATIVA_RESPOSTA = $alternativa");
+					$sql_count = oci_parse($ora_conn, "SELECT COUNT(ID_ALTERNATIVA_RESPOSTA) TOTAL FROM RESPOSTA_FECHADA WHERE ID_PERGUNTA = $id_pergunta AND ID_ALTERNATIVA_RESPOSTA = $id_alternativa");
 					oci_execute($sql_count);
 					$row_count = oci_fetch_assoc($sql_count);
 
-					echo "<tr><td id='count'>"."Grau: <b>".$alternativa."</b> - Quantidade de votos: <b>".$row_count['COUNT(ID_ALTERNATIVA_RESPOSTA)']."</b></td></tr>";
+					echo "<tr><td id='count'>"."Grau: <b>".$row_alternativa['ALTERNATIVA']."</b> - Quantidade de votos: <b>".$row_count['TOTAL']."</b></td></tr>";
 				}
 			}
 		?>

@@ -36,13 +36,13 @@
 			while ($row_pergunta = oci_fetch_assoc($sql_pergunta)) {
 				$id_pergunta = $row_pergunta['ID'];
 
-				$sql_media = oci_parse($ora_conn, "SELECT AVG(ID_ALTERNATIVA_RESPOSTA) FROM RESPOSTA_FECHADA WHERE ID_PERGUNTA = $id_pergunta");
+				$sql_media = oci_parse($ora_conn, "SELECT AVG(A.ALTERNATIVA) MEDIA FROM RESPOSTA_FECHADA R, ALTERNATIVA A WHERE R.ID_PERGUNTA = $id_pergunta AND R.ID_ALTERNATIVA_RESPOSTA = A.ID");
 				oci_execute($sql_media);
 				$row_media = oci_fetch_assoc($sql_media);
 
-				if (!$row_media['AVG(ID_ALTERNATIVA_RESPOSTA)']==NULL){
+				if (!$row_media['MEDIA']==NULL){
 					echo "<tr><td>". $row_pergunta['NUMERO'].") ". $row_pergunta['ENUNCIADO']."</td>";
-					echo "<td id='media'>".number_format($row_media['AVG(ID_ALTERNATIVA_RESPOSTA)'], 1)."</td></tr>";
+					echo "<td id='media'>".number_format($row_media['MEDIA'], 1)."</td></tr>";
 				} else {
 		?>
 
