@@ -26,6 +26,9 @@
     </ul>
 
 	<a class="link_relatorio" href="relatorio_media_geral.php"><img src="img/relatorio1.png">Média do grau de satisfação por pergunta</a> <br><br><br>
-	<a class="link_relatorio" href="relatorio_alternativas.php"><img src="img/relatorio2.png">Quantidade de votos por grau</a> <br>	
+	<a class="link_relatorio" href="relatorio_alternativas.php"><img src="img/relatorio2.png">Quantidade de votos por grau</a>
+
+	<br/><br/><br/>
+	
 </body>
 </html>

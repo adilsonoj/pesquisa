@@ -24,7 +24,8 @@ include "validaAcesso.inc";
 
 			<input id="btn_enviar" type="submit" value="Enviar">
 		</form>
-			
-		<hr>	
+
+		<br/>
+
 	</body>
 </html>
