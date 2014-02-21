@@ -51,13 +51,19 @@
 	<table>
 
 		<?
-					$sql = oci_parse($ora_conn,"SELECT RESPOSTA FROM RESPOSTA_ABERTA WHERE ID_PERGUNTA = $id_pergunta");
-					oci_execute($sql);
+					$stmt_resp_aberta = oci_parse($ora_conn, "SELECT COUNT(*) TOTAL FROM RESPOSTA_ABERTA WHERE ID_PERGUNTA = $id_pergunta AND RESPOSTA IS NOT NULL");
+					oci_execute($stmt_resp_aberta);
+					$tot_resp_aberta = oci_fetch_assoc($stmt_resp_aberta);
 
-					echo "<h4>". $row_pergunta['NUMERO'].") ".$row_pergunta['ENUNCIADO']."</h4>";
+					echo "<h4>". $row_pergunta['NUMERO'].") ".$row_pergunta['ENUNCIADO']."</h4>" . (($tot_resp_aberta['TOTAL'] > 0) ? "<i>(Total de respostas: <b>" .$tot_resp_aberta['TOTAL']. "</b>)</i>"  :  "<i>Não houve respostas para esta pergunta.</i>");
 
-					while ($row_resposta = oci_fetch_assoc($sql)){
-						echo "<tr><td id='resposta_aberta'>".$row_resposta['RESPOSTA']."</td></tr>";
+					if ($tot_resp_aberta['TOTAL'] > 0) {
+						$sql = oci_parse($ora_conn,"SELECT RESPOSTA FROM RESPOSTA_ABERTA WHERE ID_PERGUNTA = $id_pergunta AND RESPOSTA IS NOT NULL");
+						oci_execute($sql);
+
+						while ($row_resposta = oci_fetch_assoc($sql)) {
+							echo "<tr><td id='resposta_aberta'>".$row_resposta['RESPOSTA']."</td></tr>";
+						}
 					}
 				}
 			}
