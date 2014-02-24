@@ -38,6 +38,14 @@
 		<br/><br/>
 	</fieldset>
 
+	<fieldset>
+		<legend class="legend">Gráfico</legend>
+		<br/>
+		<a class="link_relatorio" href="exibe_grafico_media.php"><img src="img/relatorio_estatistico.png">Gráfico da Média do grau de satisfação por pergunta</a> <br><br><br>
+		
+		<br/><br/>
+	</fieldset>
+
 	<br/><br/><br/>
 
 </body>
