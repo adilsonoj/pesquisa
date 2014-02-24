@@ -39,9 +39,9 @@
 	</fieldset>
 
 	<fieldset>
-		<legend class="legend">Gráfico</legend>
+		<legend class="legend">Relatórios Gráficos</legend>
 		<br/>
-		<a class="link_relatorio" href="exibe_grafico_media.php"><img src="img/relatorio_estatistico.png">Gráfico da Média do grau de satisfação por pergunta</a> <br><br><br>
+		<a class="link_relatorio" href="exibe_grafico_media.php"><img src="img/relatorio_grafico2_branco.png">Gráfico da média do grau de satisfação por pergunta</a> <br><br><br>
 		
 		<br/><br/>
 	</fieldset>
