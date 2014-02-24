@@ -23,6 +23,7 @@ oci_execute($sql_pergunta);
 
 	}
 
+	
 $grafico->SetDataValues($dados_grafico);
 $grafico->SetImageBorderType('plain');
 $grafico->SetPlotType("bars");
