@@ -1,5 +1,6 @@
 <?php
-//Importando biblioteca
+
+require("valida_sessao_adm.php");
 require("conexao.php");
 require("classes/phplot.php");
 
