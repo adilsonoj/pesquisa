@@ -26,8 +26,13 @@
 
 	<img id="img_netuno" src="img/netuno.png" alt="Programa Netuno">
 	<p>
-		Esta é a área de administração do Sistema de Pesquisas da DSAM. Aqui poderão ser visualizados relatórios estatísticos a fim de aferir os resultados de sua pesquisa. Futuramente, será possível também visualizar os resultados através de gráficos, para que se tenha uma visão ainda melhor dos resultados.
+		Esta é a área de administração do Sistema de Pesquisas da DSAM. Aqui poderão ser visualizados relatórios estatísticos e gráficos que lhe permitirão avaliar os resultados de sua pesquisa.
 	</p>
+
+	<p>
+		Utilize os links abaixo para acessar os relatórios.
+	</p>
+
 	<br/><br/>
 
 	<fieldset>
