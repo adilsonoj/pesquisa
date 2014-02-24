@@ -233,6 +233,27 @@ table#form_alterar_senha tr {
 	margin-left: 120px;
 }
 
+/*Estilo do Gráfico*/
+
+#grafico{
+	text-align: center;
+}
+
+span#eixoX{
+	display: block;
+}
+
+span#eixoY{
+	 float: left;
+    left: 60px;
+    position: relative;
+    top: 280px;
+}
+
+span{
+	font-weight: bold;
+}
+
 
 
 
