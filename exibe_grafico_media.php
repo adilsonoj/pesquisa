@@ -17,15 +17,17 @@
 	<hr id="top"/>
 	<h2>Pesquisa de Clima Organizacional</h2>
 	<hr id="bottom"/>
+	<br/>
 
 <div id="grafico">
-	<h4>Gráfico de Médias por questão</h4>
+	<h3>Média do Grau de Satisfação &nbsp; x &nbsp; Pergunta</h3>
 	<img src="grafico_media.php" />
 
-	
 	<span id="eixoY">MÉDIA</span>
-	<span id="eixoX">QUESTÃO</span>
+	<span id="eixoX">PERGUNTA</span>
 </div>
+
+<br/>
 
 </body>
 </html>
