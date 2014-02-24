@@ -30,7 +30,7 @@ include "validaAcesso.inc";
 		<fieldset>
 			<legend class="legend">DADOS PESSOAIS</legend>
 			<fieldset class="dados_pessoais">
-				<legend>Faixa etátia</legend>
+				<legend>Faixa etária</legend>
 				<select name="faixa_etaria">
 					<option  value="18-23">18-23 anos</option>";
 					<option  value="24-33">24-33 anos</option>";
