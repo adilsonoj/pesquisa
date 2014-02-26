@@ -5,23 +5,11 @@
 	$stmt_participantes = oci_parse($ora_conn, "SELECT COUNT(*) TOTAL FROM RESPONDENTE");
 	oci_execute($stmt_participantes);
 	$tot_participantes = oci_fetch_assoc($stmt_participantes);
+
+	include "header.php";
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Pesquisa de Clima Organizacional - Relatório de Médias</title>
-	
-	<link rel="stylesheet" href="css/estilo.css">
-</head>
 
-<body>
-	<img src="img/header.gif" alt="DSAM">
-
-	<hr id="top"/>
-	<h2>Pesquisa de Clima Organizacional</h2>
-	<hr id="bottom"/>
 
 	<h4 id="tot_participantes">Total de Participantes: <?=$tot_participantes['TOTAL'];?></h4>
 
@@ -76,7 +64,5 @@
 		?>
 	</table>
 
-	<? include "fecha_conexao.php"; ?>
-	
-</body>
-</html>
+	<? include "fecha_conexao.php"; 
+	   include "footer.php"; ?>

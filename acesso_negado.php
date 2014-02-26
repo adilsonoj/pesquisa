@@ -12,5 +12,4 @@
 			<p>Entre em contato com o SPD da dsam!</p>
 			
 		</fieldset>
-	</body>
-</html>
+	<? include "footer.php"; ?>
